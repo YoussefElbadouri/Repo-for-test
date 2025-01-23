@@ -6,27 +6,26 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/YoussefElbadouri/Sbiy3at.git'
             }
         }
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-app .'
             }
         }
-        stage('Static Analysis with SonarQube') {
+        stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh 'sonar-scanner'
+                script {
+                    def scannerHome = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+                    withSonarQubeEnv('sonarqube-server') { // Remplacez par le nom configuré dans Jenkins
+                        sh "${scannerHome}/bin/sonar-scanner"
+                    }
                 }
             }
         }
-        stage('Test') {
+        stage('Deploy Docker Container') {
             steps {
-                echo 'No tests implemented yet.'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'docker run -d -p 5000:5000 my-app'
+                sh 'docker run -d -p 5000:5000 --name my-app-container my-app'
             }
         }
     }
 }
+
