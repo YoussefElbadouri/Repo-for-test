@@ -1,0 +1,73 @@
+1  ls
+    2  curl -O https://raw.githubusercontent.com/YoussefElbadouri/Sbiy3at/main/configure-environment.sh
+    3  nano configure-environment.sh 
+    4  ./configure-environment.sh 
+    5  nano configure-environment.sh 
+    6  sudo netstat -tuln | grep 8081
+    7  docker ps
+    8  ps aux |grep 8081
+    9  sudo kill 10872
+   10  ps aux |grep 8081
+   11  ls
+   12  cd ZAP_2.16.0/
+   13  nohup ./zap.sh -daemon -host 0.0.0.0 -port 9090 -config api.key=your_api_key > ~/zap.log 2>&1 &
+   14  ps aux |grep 9090
+   15  cat /var/jenkins_home/secrets/initialAdminPassword
+   16  sudo cat /var/jenkins_home/secrets/initialAdminPassword
+   17  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   18  ps aux |grep 9090
+   19  curl "http://localhost:9090/JSON/spider/view/status/?scanId=0&apikey=your_api_key"
+   20  docker ps
+   21  sudo chmod 777 /var/run/docker.sock
+   22  trivy --version
+   23  sudo apt-get update -y
+   24  sudo apt-get install -y wget curl
+   25  wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.45.0_linux_amd64.deb
+   26  sudo dpkg -i trivy_0.45.0_linux_amd64.deb
+   27  sudo apt-get update -y
+   28  sudo apt-get install -y wget curl
+   29  sudo dpkg -i trivy_0.45.0_linux_amd64.deb
+   30  wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.45.0_linux_amd64.deb
+   31  wget $(curl -s https://api.github.com/repos/aquasecurity/trivy/releases/latest | grep "browser_download_url.*linux_amd64.deb" | cut -d '"' -f 4)
+   32  wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
+   33  chmod +x install.sh
+   34  sudo ./install.sh
+   35  trivy --version
+   36  find / -name trivy 2>/dev/null
+   37  echo 'export PATH=$PATH:/home/ubuntu/ZAP_2.16.0/bin' >> ~/.bashrc
+   38  source ~/.bashrc
+   39  trivy --version
+   40  cd
+   41  wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.2/dependency-check-8.4.2-release.zip
+   42  unzip dependency-check-8.4.2-release.zip
+   43  mv dependency-check /opt/dependency-check
+   44  sudo mv dependency-check /opt/dependency-check
+   45  echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
+   46  source ~/.bashrc
+   47  dependency-check --version
+   48  ls -la /opt/dependency-check/bin/
+   49  echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
+   50  source ~/.bashrc
+   51  dependency-check.sh --version
+   52  trivy --version
+   53  which trivy
+   54  which dependency-check.sh
+   55  sudo nano /etc/default/jenkins
+   56  sudo systemctl restart jenkins
+   57  history
+   58  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   59  chmod +x /home/ubuntu/ZAP_2.16.0/bin/trivy
+   60  sudo chmod +x /home/ubuntu/ZAP_2.16.0/bin/trivy
+   61  /home/ubuntu/ZAP_2.16.0/bin/trivy --version
+   62  /opt/dependency-check/bin/dependency-check.sh --updateonly
+   63  ls -lh /opt/dependency-check/data
+   64  sudo chown -R jenkins:jenkins /opt/dependency-check
+   65  sudo chmod -R 777 /opt/dependency-check
+   66  sqlite3 --version
+   67  sudo apt install sqlite3
+   68  sudo apt update && sudo apt install -y zip
+   69  docker ps
+   70  docker ps -a
+   71  docker rm 125e0626b910
+   72  docker ps -a
+   73  history
