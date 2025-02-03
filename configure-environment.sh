@@ -43,11 +43,20 @@ wget "https://github.com/zaproxy/zaproxy/releases/download/v${ZAP_VERSION}/ZAP_$
 tar -xvzf "ZAP_${ZAP_VERSION}_Linux.tar.gz"
 cd "ZAP_${ZAP_VERSION}"
 nohup ./zap.sh -daemon -host 0.0.0.0 -port 9090 -config api.key=your_api_key > ~/zap.log 2>&1 &
-
+#trivy 
 wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
 chmod +x install.sh
 sudo ./install.sh
 echo 'export PATH=$PATH:/home/ubuntu/bin' >> ~/.bashrc
+source ~/.bashrc
+
+#dependancy check
+
+wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.2/dependency-check-8.4.2-release.zip
+unzip dependency-check-8.4.2-release.zip
+mv dependency-check /opt/dependency-check
+sudo mv dependency-check /opt/dependency-check
+echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
 source ~/.bashrc
 
 # Message de fin
