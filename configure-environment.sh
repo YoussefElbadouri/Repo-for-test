@@ -44,5 +44,9 @@ tar -xvzf "ZAP_${ZAP_VERSION}_Linux.tar.gz"
 cd "ZAP_${ZAP_VERSION}"
 nohup ./zap.sh -daemon -host 0.0.0.0 -port 9090 -config api.key=your_api_key > ~/zap.log 2>&1 &
 
+wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
+chmod +x install.sh
+sudo ./install.sh
+
 # Message de fin
 echo "Configuration terminée avec succès !"
