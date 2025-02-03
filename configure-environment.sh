@@ -56,7 +56,7 @@ source ~/.bashrc
 
 wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.2/dependency-check-8.4.2-release.zip
 unzip dependency-check-8.4.2-release.zip
-mv dependency-check /opt/dependency-check
+
 sudo mv dependency-check /opt/dependency-check
 echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
 source ~/.bashrc
