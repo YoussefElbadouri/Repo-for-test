@@ -37,7 +37,7 @@ pipeline {
                 sh """
                     mkdir -p ${REPORTS_DIR}
                     echo "🔍 Analyse des dépendances avec Trivy..."
-                    /home/ubuntu/ZAP_2.16.0/bin/trivy fs --severity HIGH,CRITICAL --no-progress --exit-code 1 . | tee ${REPORTS_DIR}/trivy-dependencies.txt
+                    /home/ubuntu/bin/trivy fs --severity HIGH,CRITICAL --no-progress --exit-code 1 . | tee ${REPORTS_DIR}/trivy-dependencies.txt
 
                     echo "🔍 Analyse des dépendances avec Dependency-Check..."
                     /opt/dependency-check/bin/dependency-check.sh --project MyApp --scan . --format HTML --out ${REPORTS_DIR}/dependency-check.html
