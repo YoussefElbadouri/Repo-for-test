@@ -47,6 +47,8 @@ nohup ./zap.sh -daemon -host 0.0.0.0 -port 9090 -config api.key=your_api_key > ~
 wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
 chmod +x install.sh
 sudo ./install.sh
+echo 'export PATH=$PATH:/home/ubuntu/bin' >> ~/.bashrc
+source ~/.bashrc
 
 # Message de fin
 echo "Configuration terminée avec succès !"
