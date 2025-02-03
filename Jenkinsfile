@@ -38,9 +38,7 @@ pipeline {
                     mkdir -p ${REPORTS_DIR}
                     echo "🔍 Analyse des dépendances avec Trivy..."
                     /usr/local/bin/trivy fs --severity HIGH,CRITICAL --no-progress --exit-code 1 . | tee ${REPORTS_DIR}/trivy-dependencies.txt
-                    echo "🔍 Analyse des dépendances avec Dependency-Check..."
-                    /opt/dependency-check/bin/dependency-check.sh --project MyApp --scan . --format HTML --out ${REPORTS_DIR}/dependency-check.html
-
+                    
                     echo "🔍 Analyse npm audit..."
                     export PATH=\$PATH:/usr/local/bin
                     npm audit --json > ${REPORTS_DIR}/npm-audit.json || true
