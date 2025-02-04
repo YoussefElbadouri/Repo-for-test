@@ -71,3 +71,7 @@
    71  docker rm 125e0626b910
    72  docker ps -a
    73  history
+ `sudo apt install python3-venv -y
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install flask requests
