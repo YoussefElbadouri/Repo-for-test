@@ -61,5 +61,9 @@ sudo mv dependency-check /opt/dependency-check
 echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
 source ~/.bashrc
 
+
+sudo apt update && sudo apt install zip -y
+
+
 # Message de fin
 echo "Configuration terminée avec succès !"
