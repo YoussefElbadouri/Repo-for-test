@@ -11,7 +11,7 @@ pipeline {
         ZAP_HOST = "localhost"
         ZAP_PORT = "9090"
         TARGET_URL = "http://localhost:5000"  // Met l'URL de l’application après déploiement
-        REPORTS_DIR = "reports"
+        REPORTS_DIR = "~/reports"
     }
 
     stages {
