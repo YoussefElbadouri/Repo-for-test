@@ -26,7 +26,7 @@ pipeline {
                 script {
                     def scannerHome = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                     withSonarQubeEnv(SONARQUBE_SERVER) {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=testt -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_1b2322e1fdf19971e60d3d75a7e8d5809218ebfe"  //hada bdlo darori
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=testt -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_b707df6bc1c65ca9d89e97d85f89490be3183cae"  //hada bdlo darori
                     }
                 }
             }
