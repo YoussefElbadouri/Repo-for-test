@@ -1,3 +1,4 @@
 curl -O https://raw.githubusercontent.com/YoussefElbadouri/Sbiy3at/main/configure-environment.sh
 chmod +x configure-environment.sh 
 ./configure-environment.sh 
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
