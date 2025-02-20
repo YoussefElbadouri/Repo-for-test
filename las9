@@ -1,4 +1,12 @@
-curl -O https://raw.githubusercontent.com/YoussefElbadouri/Sbiy3at/main/configure-environment.sh
+curl -O https://raw.githubusercontent.com/YoussefElbadouri/Sbiy3at/main/configure-environment.sh ##download the configuration file
 chmod +x configure-environment.sh 
-./configure-environment.sh 
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+./configure-environment.sh ##run the config file
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword #retrieve jenkins password
+admin:admin ##default cred t sonarqube
+change the sq token ##
+sonar-project.properties |Jenkinsfile |https://github.com/YoussefElbadouri/testt
+fjenkins{
+ add plugins:SonarQube Scanner
+tools: SonarQube Scanner installations =>SonarScanner
+system :Sonarqube installation =>sonarqube-server ;server url :http://localhost:9000
+
